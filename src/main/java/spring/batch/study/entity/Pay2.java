@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Pay {
+public class Pay2{
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
 
@@ -27,14 +26,13 @@ public class Pay {
     private String txName;
     private LocalDateTime txDateTime;
 
-
-    public Pay(Long amount, String txName, LocalDateTime txDateTime) {
+    public Pay2(Long amount, String txName, LocalDateTime txDateTime) {
         this.amount = amount;
         this.txName = txName;
         this.txDateTime = txDateTime;
     }
 
-    public Pay(Long id, Long amount, String txName, LocalDateTime txDateTime) {
+    public Pay2(Long id, Long amount, String txName, LocalDateTime txDateTime) {
         this.id = id;
         this.amount = amount;
         this.txName = txName;
